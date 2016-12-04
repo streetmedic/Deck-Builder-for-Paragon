@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF1E1E1E">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select a Card"
+        android:id="@+id/textView3"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:background="@drawable/frameborder"
+        android:layout_margin="2dp"
+        android:padding="2dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardList"
+        android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="3sp"
+        android:layout_gravity="center_horizontal" />
+
+    <FrameLayout
+        android:id="@+id/filterBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frameborder"
+        android:layout_margin="1dp"
+        android:layout_marginBottom="3dp"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:baselineAligned="false" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:tag="energyDamageCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/energyDamageCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView4"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_energydamage"
+                    android:maxHeight="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="physicalDamageCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/physicalDamageCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView5"
+                    android:layout_column="2"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_physicaldamage"
+                    android:maxHeight="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="critChanceCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/critChanceCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView6"
+                    android:layout_column="4"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_critchance"
+                    android:maxHeight="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="maxHPCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maxHPCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView7"
+                    android:layout_column="6"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_maxhealth"
+                    android:maxHeight="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="hpRegenCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/hpRegenCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView8"
+                    android:layout_column="8"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_healthregen"
+                    android:maxHeight="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:tag="energyArmorCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/energyArmorCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView9"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_energyarmor"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="physicalArmorCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/physicalArmorCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView10"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_physicalarmor"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="critBonusCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/critBonusCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView11"
+                    android:layout_row="1"
+                    android:layout_column="4"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_critdamage"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="maxManaCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maxManaCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView12"
+                    android:layout_row="1"
+                    android:layout_column="6"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_maxmana"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="manaRegenCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manaRegenCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView13"
+                    android:layout_row="1"
+                    android:layout_column="8"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_manaregen"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <CheckBox
+                    android:tag="energyPenCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/energyPenCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView14"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_energypen"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="physicalPenCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/physicalPenCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView15"
+                    android:layout_column="2"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_physicalpen"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="attackSpeedCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/attackSpeedCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView16"
+                    android:layout_column="4"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_attackspeed"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="lifestealCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lifestealCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView17"
+                    android:layout_column="6"
+                    android:layout_row="2"
+                    android:src="@drawable/icon_lifesteal"
+                    android:maxHeight="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+                <CheckBox
+                    android:tag="cooldownCB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cooldownCB"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:onClick="FilterCards" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView18"
+                    android:layout_column="8"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_cooldownreduction"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="25dp" />
+
+            </TableRow>
+        </TableLayout>
+    </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove Upgrade Card"
+        android:id="@+id/removeUpgradeButton"
+        android:clickable="true"
+        android:onClick="RemoveUpgradeCard"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Filters"
+        android:id="@+id/filterButton"
+        android:layout_gravity="center_horizontal"
+        android:onClick="ShowHideFilters" />
+
+</LinearLayout>

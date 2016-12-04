@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:background="@drawable/frameborder"
+    android:padding="1dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:clickable="false"
+    android:focusable="false">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/placeholder"
+        android:maxHeight="95dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:clickable="false"
+        android:focusable="false"
+        android:background="@drawable/dark_silver_frame"
+        android:padding="2dp"
+        android:layout_margin="4dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Assassin&apos;s Ward"
+        android:id="@+id/cardName"
+        android:layout_alignTop="@+id/cardImage"
+        android:layout_toEndOf="@+id/cardImage"
+        android:textSize="25dp"
+        android:paddingLeft="4dp"
+        android:textStyle="bold"
+        android:maxWidth="170dp"
+        android:gravity="center_vertical"
+        android:clickable="false"
+        android:focusable="false"
+        android:singleLine="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statOneIcon"
+        android:src="@drawable/icon_physicaldamage"
+        android:scaleType="fitCenter"
+        android:maxHeight="25dp"
+        android:adjustViewBounds="true"
+        android:paddingLeft="2dp"
+        android:layout_toRightOf="@+id/cardImage"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:id="@+id/statOneNum"
+        android:textSize="18dp"
+        android:paddingLeft="1dp"
+        android:layout_toRightOf="@+id/statOneIcon"
+        android:layout_alignParentLeft="false"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cost: 9"
+        android:id="@+id/cardCost"
+        android:layout_alignParentEnd="true"
+        android:textSize="18dp"
+        android:paddingRight="5dp"
+        android:layout_alignTop="@+id/cardName"
+        android:clickable="false"
+        android:textStyle="bold"
+        android:textColor="#eb9f0e"
+        android:focusable="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statTwoIcon"
+        android:src="@drawable/icon_maxhealth"
+        android:scaleType="fitCenter"
+        android:maxHeight="25dp"
+        android:adjustViewBounds="true"
+        android:paddingLeft="8dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/statOneNum"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:id="@+id/statTwoNum"
+        android:layout_centerVertical="true"
+        android:textSize="18dp"
+        android:paddingLeft="1dp"
+        android:layout_toRightOf="@+id/statTwoIcon"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statThreeIcon"
+        android:src="@drawable/icon_maxhealth"
+        android:scaleType="fitCenter"
+        android:maxHeight="25dp"
+        android:adjustViewBounds="true"
+        android:paddingLeft="8dp"
+        android:layout_toRightOf="@+id/statTwoNum"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:id="@+id/statThreeNum"
+        android:textSize="18dp"
+        android:paddingLeft="1dp"
+        android:layout_toRightOf="@+id/statThreeIcon"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statFourIcon"
+        android:src="@drawable/icon_maxhealth"
+        android:scaleType="fitCenter"
+        android:maxHeight="25dp"
+        android:adjustViewBounds="true"
+        android:paddingLeft="8dp"
+        android:layout_alignTop="@+id/statFourNum"
+        android:layout_toEndOf="@+id/statThreeNum"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="100"
+        android:id="@+id/statFourNum"
+        android:textSize="18dp"
+        android:paddingLeft="1dp"
+        android:layout_toEndOf="@+id/statFourIcon"
+        android:layout_centerVertical="true"
+        android:clickable="false"
+        android:focusable="false" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/cardImage"
+        android:padding="2dp"
+        android:clickable="false"
+        android:focusable="false">
+
+        <RelativeLayout
+            android:tag="upgradeOneBox"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/dark_silver_frame"
+            android:clickable="false"
+            android:padding="3dp"
+            android:visibility="visible"
+            android:layout_margin="2dp"
+            android:id="@+id/upgradeOneBox"
+            android:focusable="false">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/upgradeOneImage"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_energypen"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:clickable="false"
+                android:maxHeight="25dp"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2CP"
+                android:id="@+id/upgradeOneCost"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:textColor="#eb9f0e"
+                android:clickable="false"
+                android:paddingLeft="3dp"
+                android:textStyle="bold"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.6"
+                android:id="@+id/upgradeOneValue"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@+id/upgradeOneImage"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:tag="upgradeTwoBox"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/dark_silver_frame"
+            android:minHeight="30dp"
+            android:clickable="false"
+            android:padding="3dp"
+            android:layout_margin="2dp"
+            android:id="@+id/upgradeTwoBox"
+            android:focusable="false">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/upgradeTwoImage"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_energypen"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:clickable="false"
+                android:maxHeight="25dp"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.6"
+                android:id="@+id/upgradeTwoValue"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@+id/upgradeTwoImage"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2CP"
+                android:id="@+id/upgradeTwoCost"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:textColor="#eb9f0e"
+                android:clickable="false"
+                android:paddingLeft="3dp"
+                android:textStyle="bold"
+                android:focusable="false" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:tag="upgradeThreeBox"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/dark_silver_frame"
+            android:minHeight="30dp"
+            android:clickable="false"
+            android:padding="3dp"
+            android:layout_margin="2dp"
+            android:id="@+id/upgradeThreeBox"
+            android:focusable="false">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/upgradeThreeImage"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/icon_energypen"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:clickable="false"
+                android:maxHeight="25dp"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7.6"
+                android:id="@+id/upgradeThreeValue"
+                android:textSize="18dp"
+                android:textColor="#ffffff"
+                android:layout_toRightOf="@+id/upgradeThreeImage"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                android:focusable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2CP"
+                android:id="@+id/upgradeThreeCost"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:textColor="#eb9f0e"
+                android:clickable="false"
+                android:paddingLeft="3dp"
+                android:textStyle="bold"
+                android:focusable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

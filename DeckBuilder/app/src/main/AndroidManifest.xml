@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ericmurphy.deckbuilder"
+    android:versionCode="2"
+    android:versionName="1.1">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Deck Builder for Paragon"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Holo.NoActionBar"
+        android:largeHeap="true">
+        <activity android:name="ericmurphy.deckbuilder.MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HeroSelect" android:screenOrientation="portrait"/>
+        <activity android:name=".DeckBuilder" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".AddEquipmentCard" android:screenOrientation="portrait"/>
+        <activity android:name=".EquipmentDetails" android:screenOrientation="portrait"/>
+        <activity android:name=".AddUpgradeCard" android:screenOrientation="portrait"/>
+        <activity android:name=".PrimeSelection" android:screenOrientation="portrait"/>
+        <activity android:name=".ViewSavedDeck" android:screenOrientation="portrait"/>
+        <activity android:name=".SavedDecksList" android:screenOrientation="portrait"/>
+        <activity android:name=".CardBrowser" android:screenOrientation="portrait"/>
+        <activity android:name=".SendFeedback" android:screenOrientation="portrait"/>
+        <activity android:name=".DetailedStats" android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

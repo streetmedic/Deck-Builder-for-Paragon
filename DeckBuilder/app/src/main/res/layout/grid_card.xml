@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:scaleType="fitCenter"
+    android:adjustViewBounds="true"
+    android:padding="0dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dark_silver_frame"
+    android:id="@+id/cardLayout">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/placeholder"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:maxWidth="50dp"
+        android:layout_margin="4dp"
+        android:background="@drawable/frameborder"
+        android:padding="2dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Amulet of the Veteran"
+        android:id="@+id/cardName"
+        android:layout_alignTop="@+id/cardImage"
+        android:layout_toEndOf="@+id/cardImage"
+        android:textSize="20dp"
+        android:textColor="#ffffff" />
+
+    <LinearLayout
+        android:id="@+id/statOne"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cardImage"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/cardImage">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statOneIcon"
+            android:src="@drawable/icon_attackspeed"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:maxWidth="20dp"
+            android:layout_alignBottom="@+id/cardImage"
+            android:layout_toEndOf="@+id/cardImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.5"
+            android:id="@+id/statOneValue"
+            android:layout_toEndOf="@+id/statOneIcon"
+            android:textColor="#9fb7b8"
+            android:textSize="20dp"
+            android:layout_marginLeft="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statTwo"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cardImage"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/statOne"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statTwoIcon"
+            android:src="@drawable/icon_attackspeed"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:maxWidth="20dp"
+            android:layout_alignBottom="@+id/cardImage"
+            android:layout_toEndOf="@+id/cardImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.5"
+            android:id="@+id/statTwoValue"
+            android:layout_toEndOf="@+id/statTwoIcon"
+            android:textColor="#9fb7b8"
+            android:textSize="20dp"
+            android:layout_marginLeft="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statThree"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cardImage"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/statTwo"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statThreeIcon"
+            android:src="@drawable/icon_attackspeed"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:maxWidth="20dp"
+            android:layout_alignBottom="@+id/cardImage"
+            android:layout_toEndOf="@+id/cardImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.5"
+            android:id="@+id/statThreeValue"
+            android:layout_toEndOf="@+id/statThreeIcon"
+            android:textColor="#9fb7b8"
+            android:textSize="20dp"
+            android:layout_marginLeft="1dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/statFour"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/cardImage"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/statThree"
+        android:layout_marginLeft="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/statFourIcon"
+            android:src="@drawable/icon_attackspeed"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:maxWidth="20dp"
+            android:layout_alignBottom="@+id/cardImage"
+            android:layout_toEndOf="@+id/cardImage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6.5"
+            android:id="@+id/statFourValue"
+            android:layout_toEndOf="@+id/statFourIcon"
+            android:textColor="#9fb7b8"
+            android:textSize="20dp"
+            android:layout_marginLeft="1dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CP: 3"
+        android:id="@+id/cardCost"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#eb9f0e"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="5dp"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passive"
+        android:id="@+id/type"
+        android:layout_alignBottom="@+id/cardImage"
+        android:layout_alignEnd="@+id/cardCost"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fury"
+        android:id="@+id/affinity"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignRight="@+id/cardCost"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:baselineAligned="false"
+    android:background="#FF1E1E1E">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/dark_silver_frame"
+            android:layout_margin="4dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:background="#1b1b1b"
+                android:id="@+id/frameLayout"
+                android:layout_margin="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Assassin&apos;s Ward"
+                        android:id="@+id/cardName"
+                        android:textSize="27dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active"
+                        android:id="@+id/cardType"
+                        android:layout_gravity="left|bottom"
+                        android:layout_below="@+id/cardName"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cost: 3"
+                        android:id="@+id/costLabel"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="16dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Common"
+                        android:id="@+id/rarityLabel"
+                        android:layout_below="@+id/costLabel"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="16dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Corruption"
+                        android:id="@+id/affinityLabel"
+                        android:layout_below="@+id/rarityLabel"
+                        android:layout_alignParentEnd="true"
+                        android:textSize="20dp"
+                        android:textColor="#ffffff" />
+
+                </RelativeLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameLayout"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/statOne">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.6"
+                    android:id="@+id/statOneValue"
+                    android:layout_below="@+id/frameLayout"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#9fb7b8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statOneIcon"
+                    android:src="@drawable/icon_physicaldamage"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="35dp"
+                    android:layout_toRightOf="@+id/statOneValue"
+                    android:layout_alignParentStart="false"
+                    android:layout_below="@+id/frameLayout"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Physical Damage"
+                    android:id="@+id/statOneType"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/statTwo"
+                android:layout_below="@+id/statOne">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.6"
+                    android:id="@+id/statTwoValue"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#9fb7b8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statTwoIcon"
+                    android:src="@drawable/icon_physicaldamage"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="35dp"
+                    android:layout_toRightOf="@+id/statTwoValue"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Physical Damage"
+                    android:id="@+id/statTwoType"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/statThree"
+                android:layout_below="@+id/statTwo">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.6"
+                    android:id="@+id/statThreeValue"
+                    android:layout_below="@+id/statTwoValue"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#9fb7b8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statThreeIcon"
+                    android:src="@drawable/icon_physicaldamage"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="35dp"
+                    android:layout_toRightOf="@+id/statThreeValue"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Physical Damage"
+                    android:id="@+id/statThreeType"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/statFour"
+                android:layout_below="@+id/statThree"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.6"
+                    android:id="@+id/statFourValue"
+                    android:layout_below="@+id/statThreeValue"
+                    android:layout_alignParentStart="true"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#9fb7b8" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/statFourIcon"
+                    android:src="@drawable/icon_physicaldamage"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="35dp"
+                    android:layout_toEndOf="@+id/statThreeValue"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Physical Damage"
+                    android:id="@+id/statFourType"
+                    android:textSize="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#ffffff" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active: UNIQUE ShadowWard (Charges: 2)"
+                android:id="@+id/specialEffect"
+                android:layout_below="@+id/statFour"
+                android:layout_alignStart="@+id/statFour"
+                android:textSize="25dp"
+                android:textColor="#dfb277"
+                android:visibility="visible"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="2dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@+id/specialEffect"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dark_silver_frame"
+                android:layout_margin="5dp"
+                android:id="@+id/bonusDivider"></LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fully Upgraded Bonus"
+                android:id="@+id/upgradeBonusLabel"
+                android:layout_below="@+id/bonusDivider"
+                android:layout_centerHorizontal="true"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:layout_marginBottom="5dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/bonusTwo"
+                android:visibility="visible"
+                android:layout_below="@+id/bonusOne">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.6"
+                    android:id="@+id/bonusTwoValue"
+                    android:layout_below="@+id/statThreeValue"
+                    android:layout_alignParentStart="true"
+                    android:textSize="25dp"
+                    android:textColor="#82778c"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bonusTwoIcon"
+                    android:src="@drawable/icon_critdamage"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="35dp"
+                    android:layout_toEndOf="@+id/statThreeValue"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crit Bonus"
+                    android:id="@+id/bonusTwoType"
+                    android:layout_below="@+id/upgradeBonusLabel"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#dfb277"
+                    android:textSize="25dp"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/upgradeBonusLabel"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/bonusOne"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7.6"
+                    android:id="@+id/bonusOneValue"
+                    android:layout_below="@+id/statThreeValue"
+                    android:layout_alignParentStart="true"
+                    android:textSize="25dp"
+                    android:textColor="#82778c"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bonusOneIcon"
+                    android:src="@drawable/icon_critdamage"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:maxHeight="35dp"
+                    android:layout_toEndOf="@+id/statThreeValue"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crit Bonus"
+                    android:id="@+id/bonusOneType"
+                    android:layout_below="@+id/upgradeBonusLabel"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#dfb277"
+                    android:textSize="25dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Deck"
+            android:id="@+id/addButton"
+            android:onClick="SelectEquipmentCard"
+            android:layout_alignParentBottom="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Equipped"
+            android:id="@+id/detailsEquippedCB"
+            android:layout_gravity="bottom|center_horizontal"
+            android:checked="true"
+            android:layout_above="@+id/addButton"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</LinearLayout>

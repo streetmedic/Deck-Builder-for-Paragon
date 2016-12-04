@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/Layout"
+    android:background="#1e1e1e">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="194dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/deckName"
+            android:inputType="textCapWords|text"
+            android:layout_weight="0.7" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:id="@+id/saveButton"
+            android:layout_weight="0.3"
+            android:onClick="SaveDeck" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/frameborder"
+        android:layout_margin="1dp"
+        android:layout_marginBottom="3dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="0dp"
+            android:baselineAligned="false">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EnergyDamage_Icon"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_energydamage"
+                    android:maxHeight="20dp"
+                    android:minHeight="10dp"
+                    android:maxWidth="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Energy_Damage"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PhysicalDamage_Icon"
+                    android:layout_column="2"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_physicaldamage"
+                    android:maxHeight="20dp"
+                    android:minHeight="10dp"
+                    android:maxWidth="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Physical_Damage"
+                    android:layout_row="0"
+                    android:layout_column="3"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CritChance_Icon"
+                    android:layout_column="4"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_critchance"
+                    android:maxHeight="20dp"
+                    android:minHeight="10dp"
+                    android:maxWidth="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Crit_Chance"
+                    android:layout_row="0"
+                    android:layout_column="5"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MaxHealth_Icon"
+                    android:layout_column="6"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_maxhealth"
+                    android:maxHeight="20dp"
+                    android:minHeight="10dp"
+                    android:maxWidth="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Max_Health"
+                    android:layout_row="0"
+                    android:layout_column="7"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/HealthRegen_Icon"
+                    android:layout_column="8"
+                    android:layout_row="0"
+                    android:src="@drawable/icon_healthregen"
+                    android:maxHeight="20dp"
+                    android:minHeight="10dp"
+                    android:maxWidth="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Health_Regen"
+                    android:layout_row="0"
+                    android:layout_column="9"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EnergyArmor_Icon"
+                    android:layout_row="1"
+                    android:layout_column="0"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_energyarmor"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Energy_Armor"
+                    android:layout_column="1"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PhysicalArmor_Icon"
+                    android:layout_row="1"
+                    android:layout_column="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_physicalarmor"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Physical_Armor"
+                    android:layout_column="3"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CritDamage"
+                    android:layout_row="1"
+                    android:layout_column="4"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_critdamage"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Crit_Damage"
+                    android:layout_column="5"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/MaxMana_Icon"
+                    android:layout_row="1"
+                    android:layout_column="6"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_maxmana"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Max_Mana"
+                    android:layout_column="7"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ManaRegen_Icon"
+                    android:layout_row="1"
+                    android:layout_column="8"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_manaregen"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Mana_Regen"
+                    android:layout_column="9"
+                    android:layout_row="1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/EnergyPen_Icon"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_energypen"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Energy_Pen"
+                    android:layout_column="1"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/PhysicalPen_Icon"
+                    android:layout_column="2"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_physicalpen"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Physical_Pen"
+                    android:layout_column="3"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/AttackSpeed_Icon"
+                    android:layout_column="4"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_attackspeed"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Attack_Speed"
+                    android:layout_column="5"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Lifesteal_Icon"
+                    android:layout_column="6"
+                    android:layout_row="2"
+                    android:src="@drawable/icon_lifesteal"
+                    android:maxHeight="20dp"
+                    android:minHeight="10dp"
+                    android:maxWidth="20dp"
+                    android:layout_rowWeight="1"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Lifesteal"
+                    android:layout_row="2"
+                    android:layout_column="7"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/CooldownReduction_Icon"
+                    android:layout_column="8"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:src="@drawable/icon_cooldownreduction"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="20dp"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="0"
+                    android:id="@+id/Cooldown_Reduction"
+                    android:layout_column="9"
+                    android:layout_row="2"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_weight="1" />
+            </TableRow>
+        </TableLayout>
+    </FrameLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/equippedCardsList"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="3sp">
+    </ListView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="1dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:background="@drawable/frameborder"
+            android:measureWithLargestChild="false"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:baselineAligned="false"
+            android:layout_gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/6"
+                android:id="@+id/equipmentCards"
+                android:layout_gravity="center"
+                android:textColor="#eb9f0e"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:layout_margin="0dp"
+                android:paddingTop="5dp"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/60"
+                android:id="@+id/cardsEquipped"
+                android:layout_gravity="center"
+                android:textColor="#eb9f0e"
+                android:textSize="18dp"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:paddingBottom="5dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <Button
+            android:tag="equipmentButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Add Equipment"
+            android:id="@+id/button"
+            android:onClick="AddCard"
+            android:layout_weight="0.35"
+            android:textSize="16dp" />
+
+        <Button
+            android:tag="upgradeButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Add Extra Upgrade"
+            android:id="@+id/button5"
+            android:layout_gravity="center_horizontal"
+            android:onClick="AddCard"
+            android:layout_weight="0.35"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="40/40"
+            android:id="@+id/cardCount"
+            android:textColor="#eb9f0e"
+            android:textSize="16dp"
+            android:background="@drawable/frameborder"
+            android:layout_weight="0.2"
+            android:textAlignment="center"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>

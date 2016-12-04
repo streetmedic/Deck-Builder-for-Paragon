@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ericmurphy.deckbuilder.MainActivity"
+    android:background="@drawable/main_background">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Deck"
+        android:id="@+id/newDeckButton"
+        android:onClick="NewDeck"
+        android:nestedScrollingEnabled="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Decks"
+        android:id="@+id/button2"
+        android:onClick="ViewSavedDecks"
+        android:nestedScrollingEnabled="false"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/newDeckButton"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Portions of the materials used are ®, (tm),(mr), and/or (mc) Epic Games, Inc., and/or copyrighted works of Epic Games, Inc., in the United States of America and elsewhere. All rights reserved, Epic Games, Inc. This material is not official and is not endorsed by Epic Games, Inc."
+        android:id="@+id/textView2"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:textStyle="italic"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:padding="1dp"
+        android:textSize="11dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse Cards"
+        android:id="@+id/button4"
+        android:onClick="OpenCardBrowser"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Report Bug/Send Feedback"
+        android:id="@+id/button6"
+        android:onClick="SendFeedback"
+        android:nestedScrollingEnabled="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
